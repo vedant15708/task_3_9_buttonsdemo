@@ -46,7 +46,8 @@ class _ButtonDemoState extends State<ButtonDemo> {
               Card(
                 elevation: 3,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 child: TextButton(
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(15),
@@ -65,7 +66,8 @@ class _ButtonDemoState extends State<ButtonDemo> {
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.all(15),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
                 onPressed: () {
                   print("Raised/Elevated Button Pressed");
@@ -80,7 +82,8 @@ class _ButtonDemoState extends State<ButtonDemo> {
                   padding: const EdgeInsets.all(15),
                   side: const BorderSide(color: Colors.deepPurple, width: 2),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
                 onPressed: () {
                   print("Outline Button Pressed");
@@ -139,11 +142,12 @@ class _ButtonDemoState extends State<ButtonDemo> {
                   },
                   items: <String>['One', 'Two', 'Three']
                       .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      })
+                      .toList(),
                 ),
               ),
               const SizedBox(height: 12),
@@ -153,13 +157,15 @@ class _ButtonDemoState extends State<ButtonDemo> {
                 color: Colors.white,
                 elevation: 6,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 onSelected: (value) {
                   print("Selected: $value");
                 },
                 itemBuilder: (BuildContext context) {
-                  return ['Option 1', 'Option 2', 'Option 3']
-                      .map((String choice) {
+                  return ['Option 1', 'Option 2', 'Option 3'].map((
+                    String choice,
+                  ) {
                     return PopupMenuItem<String>(
                       value: choice,
                       child: Text(choice),
